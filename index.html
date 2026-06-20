@@ -11,16 +11,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .logo{font-size:11px;font-weight:600;color:#c9a84c;letter-spacing:.08em}
 .title{font-size:18px;font-weight:600;color:#fff;margin-top:1px}
 .sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:1px}
-
-/* Tabs */
 .tabs{display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:60px;z-index:99}
 .tab{padding:12px 6px;text-align:center;font-size:13px;font-weight:600;color:#9ca3af;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s}
 .tab.active{color:#0a1628;border-bottom-color:#0a1628}
 .tab-icon{font-size:18px;display:block;margin-bottom:2px}
 .screen{display:none;padding:0 0 1rem}
 .screen.active{display:block}
-
-/* Cards */
 .card{background:#fff;margin:10px 1rem 0;border-radius:16px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08)}
 .card-title{font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;padding:.85rem 1.25rem .4rem}
 .field{padding:.4rem 1.25rem}
@@ -31,65 +27,62 @@ input,select{width:100%;padding:11px 13px;border:1.5px solid #e5e7eb;border-radi
 input:focus,select:focus{outline:none;border-color:#0a1628;background:#fff}
 .select-wrap{position:relative}
 .select-wrap::after{content:"⌄";position:absolute;right:13px;top:50%;transform:translateY(-50%);color:#9ca3af;font-size:18px;pointer-events:none}
-
-/* Linen qty rows */
 .linen-list{padding:.5rem 1.25rem 1rem;display:flex;flex-direction:column;gap:8px}
 .linen-row{display:flex;align-items:center;gap:10px;background:#f9fafb;border-radius:10px;padding:10px 12px;border:1.5px solid #e5e7eb}
-.linen-name{flex:1;font-size:14px;font-weight:600;color:#111;line-height:1.3}
+.linen-name{flex:1}
+.linen-title{font-size:14px;font-weight:600;color:#111;line-height:1.3}
 .linen-sub{font-size:11px;color:#6b7280}
 .qty-ctrl{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .qty-btn{width:32px;height:32px;border-radius:8px;border:1.5px solid #d1d5db;background:#fff;font-size:20px;font-weight:500;color:#0a1628;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
 .qty-num{font-size:17px;font-weight:700;color:#9ca3af;min-width:24px;text-align:center}
 .qty-num.active{color:#0a1628}
-
-/* Send button */
 .btn-area{padding:.75rem 1rem 0}
-.btn{width:100%;padding:14px;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s}
+.btn{width:100%;padding:14px;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
 .btn-primary{background:#0a1628;color:#c9a84c}
-.btn-primary:active{opacity:.85}
-.btn-wa{background:#25D366;color:#fff}
-.btn-danger{background:#fee2e2;color:#dc2626;border:1.5px solid #fca5a5}
 .btn-sm{padding:8px 14px;font-size:13px;border-radius:9px;border:none;font-weight:600;cursor:pointer}
-
-/* Batch list (pending) */
 .batch-list{padding:.5rem 1rem;display:flex;flex-direction:column;gap:10px}
 .batch-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);border:1.5px solid #e5e7eb}
 .batch-card.pending{border-color:#f59e0b}
 .batch-card.returned{border-color:#10b981}
 .batch-hdr{padding:12px 14px;display:flex;align-items:flex-start;gap:10px}
-.batch-status{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.status-pending{background:#f59e0b}
-.status-returned{background:#10b981}
+.batch-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.dot-pending{background:#f59e0b}
+.dot-returned{background:#10b981}
 .batch-info{flex:1}
 .batch-prop{font-size:14px;font-weight:700;color:#111}
 .batch-meta{font-size:12px;color:#6b7280;margin-top:2px}
 .batch-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;flex-shrink:0}
 .badge-pending{background:#fef3c7;color:#92400e}
 .badge-returned{background:#d1fae5;color:#065f46}
-.batch-items{padding:0 14px 12px;display:flex;flex-direction:column;gap:4px}
-.batch-item{font-size:13px;color:#374151;display:flex;justify-content:space-between;align-items:center}
-.batch-item-name{font-weight:500}
-.batch-item-qty{font-weight:700;color:#0a1628;background:#f0f4ff;padding:2px 8px;border-radius:6px;font-size:12px}
+.batch-items{padding:0 14px 10px;display:flex;flex-direction:column;gap:4px}
+.batch-item{font-size:13px;color:#374151;display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid #f5f5f5}
+.batch-item:last-child{border-bottom:none}
+.item-qty{font-weight:700;color:#0a1628;background:#f0f4ff;padding:2px 8px;border-radius:6px;font-size:12px}
 .batch-actions{padding:0 14px 12px;display:flex;gap:8px}
 .btn-return{background:#d1fae5;color:#065f46;border:1.5px solid #6ee7b7}
-.btn-wa-sm{background:#25D366;color:#fff}
-
-/* Empty state */
+.btn-remind{background:#e0f2fe;color:#0369a1;border:1.5px solid #7dd3fc}
 .empty{text-align:center;padding:3rem 1rem;color:#9ca3af}
 .empty-icon{font-size:48px;display:block;margin-bottom:12px}
-.empty-text{font-size:14px;font-weight:500}
-
-/* Toast */
-.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#0a1628;color:#c9a84c;padding:12px 24px;border-radius:30px;font-size:14px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999;white-space:nowrap}
-.toast.show{opacity:1}
-
-/* Summary screen */
 .summary-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 1rem 0}
 .stat-card{background:#fff;border-radius:14px;padding:1rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.08)}
 .stat-n{font-size:28px;font-weight:700;color:#111}
 .stat-n.warn{color:#d97706}
 .stat-n.ok{color:#059669}
 .stat-l{font-size:12px;color:#6b7280;margin-top:3px;font-weight:500}
+.out-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:13px}
+.out-row:last-child{border-bottom:none}
+.out-qty{font-weight:700;color:#0a1628;background:#f0f4ff;padding:2px 10px;border-radius:8px;font-size:12px}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#0a1628;color:#c9a84c;padding:12px 24px;border-radius:30px;font-size:14px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999;white-space:nowrap}
+.toast.show{opacity:1}
+.confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:flex-end;display:none}
+.confirm-box{background:#fff;width:100%;border-radius:20px 20px 0 0;padding:1.5rem 1.25rem 2rem;display:flex;flex-direction:column;gap:12px}
+.confirm-box h3{font-size:16px;font-weight:700;color:#111}
+.confirm-box p{font-size:14px;color:#6b7280}
+.confirm-box input{padding:12px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:15px;width:100%}
+.confirm-box input:focus{outline:none;border-color:#0a1628}
+.confirm-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.btn-cancel{background:#f3f4f6;color:#374151;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-confirm{background:#0a1628;color:#c9a84c;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
@@ -106,7 +99,7 @@ input:focus,select:focus{outline:none;border-color:#0a1628;background:#fff}
   <div class="tab" onclick="showTab('summary')"><span class="tab-icon">📊</span>Summary</div>
 </div>
 
-<!-- ══ SEND OUT SCREEN ══ -->
+<!-- SEND OUT -->
 <div class="screen active" id="screen-send">
   <div class="card">
     <div class="card-title">Who & Where</div>
@@ -119,16 +112,10 @@ input:focus,select:focus{outline:none;border-color:#0a1628;background:#fff}
       <div class="select-wrap">
         <select id="send-prop">
           <option value="">— Select property —</option>
-          <option value="Beachwalk">Beachwalk</option>
-          <option value="Villa Bella">Villa Bella</option>
-          <option value="AquaTerra">AquaTerra</option>
-          <option value="Azure">Azure</option>
-          <option value="Welcome Homes SurfMood">Welcome Homes SurfMood</option>
-          <option value="Welcome Homes H2O">Welcome Homes H2O</option>
-          <option value="PV Escape">PV Escape</option>
-          <option value="Beach Please">Beach Please</option>
-          <option value="Welcome Homes SurfSide">Welcome Homes SurfSide</option>
-          <option value="Welcome Homes Mermaid Cove">Welcome Homes Mermaid Cove</option>
+          <option>Beachwalk</option><option>Villa Bella</option><option>AquaTerra</option>
+          <option>Azure</option><option>Welcome Homes SurfMood</option><option>Welcome Homes H2O</option>
+          <option>PV Escape</option><option>Beach Please</option><option>Welcome Homes SurfSide</option>
+          <option>Welcome Homes Mermaid Cove</option>
         </select>
       </div>
     </div>
@@ -137,99 +124,117 @@ input:focus,select:focus{outline:none;border-color:#0a1628;background:#fff}
       <input type="date" id="send-date">
     </div>
   </div>
-
   <div class="card">
     <div class="card-title">Pieces being sent to laundry</div>
     <div class="linen-list" id="send-linen-list"></div>
   </div>
-
   <div class="btn-area">
-    <button class="btn btn-primary" onclick="registerSend()">📤 Register & Send WhatsApp</button>
+    <button class="btn btn-primary" onclick="registerSend()">📤 Register & Notify WhatsApp</button>
   </div>
 </div>
 
-<!-- ══ TRACKING SCREEN ══ -->
+<!-- TRACKING -->
 <div class="screen" id="screen-track">
   <div style="padding:10px 1rem 0">
     <div class="select-wrap">
       <select id="filter-prop" onchange="renderBatches()">
         <option value="">All properties</option>
-        <option value="Beachwalk">Beachwalk</option>
-        <option value="Villa Bella">Villa Bella</option>
-        <option value="AquaTerra">AquaTerra</option>
-        <option value="Azure">Azure</option>
-        <option value="Welcome Homes SurfMood">Welcome Homes SurfMood</option>
-        <option value="Welcome Homes H2O">Welcome Homes H2O</option>
-        <option value="PV Escape">PV Escape</option>
-        <option value="Beach Please">Beach Please</option>
-        <option value="Welcome Homes SurfSide">Welcome Homes SurfSide</option>
-        <option value="Welcome Homes Mermaid Cove">Welcome Homes Mermaid Cove</option>
+        <option>Beachwalk</option><option>Villa Bella</option><option>AquaTerra</option>
+        <option>Azure</option><option>Welcome Homes SurfMood</option><option>Welcome Homes H2O</option>
+        <option>PV Escape</option><option>Beach Please</option><option>Welcome Homes SurfSide</option>
+        <option>Welcome Homes Mermaid Cove</option>
       </select>
     </div>
   </div>
   <div class="batch-list" id="batch-list"></div>
 </div>
 
-<!-- ══ SUMMARY SCREEN ══ -->
+<!-- SUMMARY -->
 <div class="screen" id="screen-summary">
   <div class="summary-stats">
     <div class="stat-card"><div class="stat-n warn" id="sum-pending">0</div><div class="stat-l">Batches pending</div></div>
     <div class="stat-card"><div class="stat-n ok" id="sum-returned">0</div><div class="stat-l">Batches returned</div></div>
   </div>
   <div class="card" style="margin-top:10px">
-    <div class="card-title">Pieces still out</div>
-    <div id="sum-out-list" style="padding:.5rem 1.25rem 1rem;font-size:14px;color:#374151;display:flex;flex-direction:column;gap:6px"></div>
+    <div class="card-title">Pieces still out at laundry</div>
+    <div id="sum-out-list" style="padding:.5rem 1.25rem 1rem"></div>
+  </div>
+</div>
+
+<!-- CONFIRM RETURN OVERLAY -->
+<div class="confirm-overlay" id="confirm-overlay">
+  <div class="confirm-box">
+    <h3>✅ Confirm Return</h3>
+    <p>Who is confirming this batch returned?</p>
+    <input type="text" id="confirm-name" placeholder="Your name...">
+    <div class="confirm-btns">
+      <button class="btn-cancel" onclick="closeConfirm()">Cancel</button>
+      <button class="btn-confirm" onclick="doConfirmReturn()">Confirm</button>
+    </div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-// ── DATA ─────────────────────────────────────
+// ── LINENS (unit per piece) ──────────────────
 const LINENS = [
-  {id:"sheet_king",   name:"Sheet Set", sub:"King"},
-  {id:"sheet_queen",  name:"Sheet Set", sub:"Queen"},
-  {id:"sheet_full",   name:"Sheet Set", sub:"Full"},
-  {id:"sheet_twin",   name:"Sheet Set", sub:"Twin"},
-  {id:"duvet_cov_king",  name:"Duvet Cover", sub:"King"},
-  {id:"duvet_cov_queen", name:"Duvet Cover", sub:"Queen"},
-  {id:"duvet_cov_full",  name:"Duvet Cover", sub:"Full"},
-  {id:"duvet_cov_twin",  name:"Duvet Cover", sub:"Twin"},
-  {id:"duvet_ins_king",  name:"Duvet Insert", sub:"King"},
-  {id:"duvet_ins_queen", name:"Duvet Insert", sub:"Queen"},
-  {id:"duvet_ins_full",  name:"Duvet Insert", sub:"Full"},
-  {id:"duvet_ins_twin",  name:"Duvet Insert", sub:"Twin"},
-  {id:"mp_elastic_king",  name:"Mattress Protector (Elastic)", sub:"King"},
-  {id:"mp_elastic_queen", name:"Mattress Protector (Elastic)", sub:"Queen"},
-  {id:"mp_elastic_full",  name:"Mattress Protector (Elastic)", sub:"Full"},
-  {id:"mp_elastic_twin",  name:"Mattress Protector (Elastic)", sub:"Twin"},
-  {id:"mp_zipper_king",   name:"Mattress Protector (Zipper)", sub:"King"},
-  {id:"mp_zipper_queen",  name:"Mattress Protector (Zipper)", sub:"Queen"},
-  {id:"mp_zipper_full",   name:"Mattress Protector (Zipper)", sub:"Full"},
-  {id:"mp_zipper_twin",   name:"Mattress Protector (Zipper)", sub:"Twin"},
-  {id:"pillow_std",   name:"Pillowcase Protector", sub:"Standard"},
-  {id:"pillow_king",  name:"Pillowcase Protector", sub:"King"},
-  {id:"bath_towels",  name:"Bath Towels", sub:"Set of 4"},
-  {id:"hand_towels",  name:"Hand Towels", sub:"Set of 4"},
-  {id:"washcloths",   name:"Washcloths", sub:"Set of 4"},
-  {id:"bath_mat",     name:"Bath Mat", sub:"Unit"},
-  {id:"pool_towels",  name:"Pool Towels", sub:"Unit"},
+  {id:"sheet_king",       name:"Sheet Set",                    sub:"King"},
+  {id:"sheet_queen",      name:"Sheet Set",                    sub:"Queen"},
+  {id:"sheet_full",       name:"Sheet Set",                    sub:"Full"},
+  {id:"sheet_twin",       name:"Sheet Set",                    sub:"Twin"},
+  {id:"duvet_cov_king",   name:"Duvet Cover",                  sub:"King"},
+  {id:"duvet_cov_queen",  name:"Duvet Cover",                  sub:"Queen"},
+  {id:"duvet_cov_full",   name:"Duvet Cover",                  sub:"Full"},
+  {id:"duvet_cov_twin",   name:"Duvet Cover",                  sub:"Twin"},
+  {id:"duvet_ins_king",   name:"Duvet Insert",                 sub:"King"},
+  {id:"duvet_ins_queen",  name:"Duvet Insert",                 sub:"Queen"},
+  {id:"duvet_ins_full",   name:"Duvet Insert",                 sub:"Full"},
+  {id:"duvet_ins_twin",   name:"Duvet Insert",                 sub:"Twin"},
+  {id:"mp_el_king",       name:"Mattress Protector (Elastic)", sub:"King"},
+  {id:"mp_el_queen",      name:"Mattress Protector (Elastic)", sub:"Queen"},
+  {id:"mp_el_full",       name:"Mattress Protector (Elastic)", sub:"Full"},
+  {id:"mp_el_twin",       name:"Mattress Protector (Elastic)", sub:"Twin"},
+  {id:"mp_zip_king",      name:"Mattress Protector (Zipper)",  sub:"King"},
+  {id:"mp_zip_queen",     name:"Mattress Protector (Zipper)",  sub:"Queen"},
+  {id:"mp_zip_full",      name:"Mattress Protector (Zipper)",  sub:"Full"},
+  {id:"mp_zip_twin",      name:"Mattress Protector (Zipper)",  sub:"Twin"},
+  {id:"pc_std",           name:"Pillowcase Protector",         sub:"Standard"},
+  {id:"pc_king",          name:"Pillowcase Protector",         sub:"King"},
+  {id:"bath_towel",       name:"Bath Towel",                   sub:"Unit"},
+  {id:"hand_towel",       name:"Hand Towel",                   sub:"Unit"},
+  {id:"washcloth",        name:"Washcloth",                    sub:"Unit"},
+  {id:"bath_mat",         name:"Bath Mat",                     sub:"Unit"},
+  {id:"pool_towel",       name:"Pool Towel",                   sub:"Unit"},
 ];
 
-// sendQty[id] = number
+// ── STATE ────────────────────────────────────
 const sendQty = {};
 LINENS.forEach(l => sendQty[l.id] = 0);
 
-// batches stored in localStorage
-function loadBatches(){ try{ return JSON.parse(localStorage.getItem("xj_laundry")||"[]"); }catch(e){return[];} }
-function saveBatches(b){ localStorage.setItem("xj_laundry", JSON.stringify(b)); }
+const STORAGE_KEY = "xj_laundry_v2";
+
+function loadBatches(){
+  try{ return JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]"); }
+  catch(e){ return []; }
+}
+function saveBatches(){
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(batches));
+    return true;
+  } catch(e){
+    showToast("⚠️ Could not save — storage full");
+    return false;
+  }
+}
+
 let batches = loadBatches();
+let pendingReturnId = null;
 
 // ── TABS ─────────────────────────────────────
 function showTab(name){
   document.querySelectorAll(".tab").forEach((t,i)=>{
-    const names=["send","track","summary"];
-    t.classList.toggle("active", names[i]===name);
+    t.classList.toggle("active",["send","track","summary"][i]===name);
   });
   document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
   document.getElementById("screen-"+name).classList.add("active");
@@ -237,17 +242,17 @@ function showTab(name){
   if(name==="summary") renderSummary();
 }
 
-// ── SEND SCREEN ───────────────────────────────
+// ── SEND LIST ─────────────────────────────────
 function buildSendList(){
-  const list = document.getElementById("send-linen-list");
+  const list=document.getElementById("send-linen-list");
   list.innerHTML="";
   LINENS.forEach(l=>{
     const qty=sendQty[l.id]||0;
     const row=document.createElement("div");
     row.className="linen-row";
     row.innerHTML=`
-      <div style="flex:1">
-        <div class="linen-name">${l.name}</div>
+      <div class="linen-name">
+        <div class="linen-title">${l.name}</div>
         <div class="linen-sub">${l.sub}</div>
       </div>
       <div class="qty-ctrl">
@@ -257,7 +262,7 @@ function buildSendList(){
       </div>`;
     list.appendChild(row);
   });
-  document.querySelectorAll(".qty-btn[data-id]").forEach(btn=>{
+  list.querySelectorAll(".qty-btn").forEach(btn=>{
     btn.addEventListener("click",()=>{
       const id=btn.dataset.id, d=parseInt(btn.dataset.d);
       sendQty[id]=Math.max(0,(sendQty[id]||0)+d);
@@ -268,166 +273,160 @@ function buildSendList(){
   });
 }
 
-// Set today's date
-document.getElementById("send-date").value = new Date().toISOString().split("T")[0];
+document.getElementById("send-date").value=new Date().toISOString().split("T")[0];
 
 function registerSend(){
   const emp=document.getElementById("send-emp").value.trim();
   const prop=document.getElementById("send-prop").value;
   const date=document.getElementById("send-date").value;
   if(!emp||!prop){showToast("⚠️ Enter your name and select a property");return;}
-
   const items=LINENS.filter(l=>sendQty[l.id]>0).map(l=>({id:l.id,name:l.name,sub:l.sub,qty:sendQty[l.id]}));
   if(!items.length){showToast("⚠️ Add at least one item");return;}
 
-  const batch={
-    id: Date.now(),
-    emp, prop, date,
-    items,
-    status:"pending",
-    returnedBy:"",
-    returnedDate:""
-  };
+  const batch={id:Date.now(),emp,prop,date,items,status:"pending",returnedBy:"",returnedDate:""};
   batches.unshift(batch);
-  saveBatches(batches);
+  const saved=saveBatches();
+  if(!saved) return;
 
-  // Build WhatsApp message
+  // WA message
   const ds=new Date(date+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
-  let lines=[
-    "🧺 XTREME-JAX — LAUNDRY SENT",
-    "─────────────────────────────",
-    `Employee : ${emp}`,
-    `Property : ${prop}`,
-    `Date     : ${ds}`,
-    "─────────────────────────────",
-    "PIECES SENT TO LAUNDRY:"
-  ];
-  items.forEach(it=>lines.push(`  • ${it.name} (${it.sub}): ${it.qty}`));
-  lines.push("─────────────────────────────");
-  lines.push(`Total pieces: ${items.reduce((a,b)=>a+b.qty,0)}`);
-  lines.push("Please confirm when returned ✅");
+  const total=items.reduce((a,b)=>a+b.qty,0);
+  let lines=["🧺 XTREME-JAX — LAUNDRY SENT","─────────────────────────────",
+    `Employee : ${emp}`,`Property : ${prop}`,`Date     : ${ds}`,
+    "─────────────────────────────","PIECES SENT:"];
+  items.forEach(it=>lines.push(`  • ${it.name} (${it.sub}): ${it.qty} unit${it.qty>1?"s":""}`));
+  lines.push("─────────────────────────────",`Total: ${total} piece${total>1?"s":""}`,
+    "Please confirm when returned ✅");
   const text=lines.join("\n");
 
-  // Reset form
+  // Reset
   LINENS.forEach(l=>sendQty[l.id]=0);
   buildSendList();
   document.getElementById("send-emp").value="";
   document.getElementById("send-prop").value="";
   document.getElementById("send-date").value=new Date().toISOString().split("T")[0];
 
-  showToast("✓ Registered!");
-  // Send to both WA
+  showToast("✓ Saved & sending WhatsApp...");
   window.open(`https://wa.me/19045824788?text=${encodeURIComponent(text)}`,"_blank");
-  setTimeout(()=>window.open(`https://wa.me/19045251199?text=${encodeURIComponent(text)}`,"_blank"),1200);
+  setTimeout(()=>window.open(`https://wa.me/19045251199?text=${encodeURIComponent(text)}`,"_blank"),1500);
 }
 
-// ── TRACKING SCREEN ───────────────────────────
+// ── TRACKING ──────────────────────────────────
 function renderBatches(){
+  batches=loadBatches(); // always re-read from storage
   const filter=document.getElementById("filter-prop").value;
   const list=document.getElementById("batch-list");
   list.innerHTML="";
-  let filtered=batches.filter(b=>!filter||b.prop===filter);
+  let filtered=filter?batches.filter(b=>b.prop===filter):batches;
   if(!filtered.length){
-    list.innerHTML=`<div class="empty"><span class="empty-icon">🧺</span><div class="empty-text">No batches yet</div></div>`;
+    list.innerHTML=`<div class="empty"><span class="empty-icon">🧺</span><div class="empty-text">No batches yet.<br>Go to Send Out to register one.</div></div>`;
     return;
   }
-  // Pending first, then returned
-  filtered.sort((a,b)=>(a.status==="pending"?0:1)-(b.status==="pending"?0:1)||(b.id-a.id));
+  // pending first
+  filtered=[...filtered].sort((a,b)=>(a.status==="pending"?0:1)-(b.status==="pending"?0:1)||b.id-a.id);
   filtered.forEach(batch=>{
     const isPending=batch.status==="pending";
     const ds=new Date(batch.date+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
-    const totalPcs=batch.items.reduce((a,b)=>a+b.qty,0);
+    const total=batch.items.reduce((a,b)=>a+b.qty,0);
     const div=document.createElement("div");
     div.className=`batch-card ${isPending?"pending":"returned"}`;
     div.innerHTML=`
       <div class="batch-hdr">
-        <div class="batch-status ${isPending?"status-pending":"status-returned"}"></div>
+        <div class="batch-dot ${isPending?"dot-pending":"dot-returned"}"></div>
         <div class="batch-info">
           <div class="batch-prop">${batch.prop}</div>
-          <div class="batch-meta">Sent ${ds} by ${batch.emp} · ${totalPcs} pieces
-            ${!isPending?`<br>Returned ${batch.returnedDate} by ${batch.returnedBy}`:""}
+          <div class="batch-meta">Sent ${ds} by ${batch.emp} · ${total} piece${total>1?"s":""}
+            ${!isPending?`<br>✅ Returned ${batch.returnedDate} — confirmed by ${batch.returnedBy}`:""}
           </div>
         </div>
-        <span class="batch-badge ${isPending?"badge-pending":"badge-returned"}">${isPending?"Pending":"Returned"}</span>
+        <span class="batch-badge ${isPending?"badge-pending":"badge-returned"}">${isPending?"⏳ Pending":"✅ Returned"}</span>
       </div>
       <div class="batch-items">
         ${batch.items.map(it=>`
           <div class="batch-item">
-            <span class="batch-item-name">${it.name} (${it.sub})</span>
-            <span class="batch-item-qty">${it.qty}</span>
+            <span>${it.name} <span style="color:#9ca3af">(${it.sub})</span></span>
+            <span class="item-qty">${it.qty}</span>
           </div>`).join("")}
       </div>
       ${isPending?`
       <div class="batch-actions">
-        <button class="btn btn-sm btn-return" onclick="confirmReturn(${batch.id})">✅ Confirm Return</button>
-        <button class="btn btn-sm btn-wa-sm" onclick="sendReminderWA(${batch.id})">📲 Remind</button>
+        <button class="btn btn-sm btn-return" onclick="openConfirm(${batch.id})">✅ Confirm Return</button>
+        <button class="btn btn-sm btn-remind" onclick="sendReminder(${batch.id})">📲 Remind</button>
       </div>`:""}`;
     list.appendChild(div);
   });
 }
 
-function confirmReturn(id){
-  const name=prompt("Who is confirming the return?");
-  if(!name||!name.trim()) return;
-  const b=batches.find(x=>x.id===id);
-  if(!b) return;
+// ── CONFIRM RETURN ────────────────────────────
+function openConfirm(id){
+  pendingReturnId=id;
+  document.getElementById("confirm-name").value="";
+  document.getElementById("confirm-overlay").style.display="flex";
+  setTimeout(()=>document.getElementById("confirm-name").focus(),100);
+}
+function closeConfirm(){
+  document.getElementById("confirm-overlay").style.display="none";
+  pendingReturnId=null;
+}
+function doConfirmReturn(){
+  const name=document.getElementById("confirm-name").value.trim();
+  if(!name){showToast("⚠️ Enter your name");return;}
+  const b=batches.find(x=>x.id===pendingReturnId);
+  if(!b){closeConfirm();return;}
   b.status="returned";
-  b.returnedBy=name.trim();
+  b.returnedBy=name;
   b.returnedDate=new Date().toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
-  saveBatches(batches);
+  saveBatches();
+  closeConfirm();
 
-  // WA notification
-  const lines=[
-    "✅ XTREME-JAX — LAUNDRY RETURNED",
-    "─────────────────────────────",
-    `Property : ${b.prop}`,
-    `Sent by  : ${b.emp}`,
-    `Confirmed by: ${b.returnedBy}`,
-    `Date     : ${b.returnedDate}`,
-    "─────────────────────────────",
-    "PIECES RETURNED:"
-  ];
-  b.items.forEach(it=>lines.push(`  • ${it.name} (${it.sub}): ${it.qty}`));
-  lines.push("─────────────────────────────");
+  const total=b.items.reduce((a,c)=>a+c.qty,0);
+  let lines=["✅ XTREME-JAX — LAUNDRY RETURNED","─────────────────────────────",
+    `Property     : ${b.prop}`,
+    `Sent by      : ${b.emp}`,
+    `Confirmed by : ${name}`,
+    `Return date  : ${b.returnedDate}`,
+    "─────────────────────────────","PIECES RETURNED:"];
+  b.items.forEach(it=>lines.push(`  • ${it.name} (${it.sub}): ${it.qty} unit${it.qty>1?"s":""}`));
+  lines.push("─────────────────────────────",`Total: ${total} piece${total>1?"s":""}`);
   const text=lines.join("\n");
-  window.open(`https://wa.me/19045824788?text=${encodeURIComponent(text)}`,"_blank");
-  setTimeout(()=>window.open(`https://wa.me/19045251199?text=${encodeURIComponent(text)}`,"_blank"),1200);
+
+  showToast("✓ Return confirmed!");
   renderBatches();
   renderSummary();
+  window.open(`https://wa.me/19045824788?text=${encodeURIComponent(text)}`,"_blank");
+  setTimeout(()=>window.open(`https://wa.me/19045251199?text=${encodeURIComponent(text)}`,"_blank"),1500);
 }
 
-function sendReminderWA(id){
+function sendReminder(id){
   const b=batches.find(x=>x.id===id);
-  if(!b) return;
+  if(!b)return;
   const ds=new Date(b.date+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"});
-  const text=`🧺 REMINDER — Laundry for ${b.prop} sent on ${ds} is still PENDING return.\n\nItems: ${b.items.map(it=>`${it.name} (${it.sub}) x${it.qty}`).join(", ")}`;
+  const total=b.items.reduce((a,c)=>a+c.qty,0);
+  const text=`🧺 REMINDER — Laundry Pending\n\nProperty: ${b.prop}\nSent: ${ds} by ${b.emp}\nTotal: ${total} pieces\n\nItems:\n${b.items.map(it=>`  • ${it.name} (${it.sub}): ${it.qty}`).join("\n")}\n\nPlease confirm when returned ✅`;
   window.open(`https://wa.me/19045824788?text=${encodeURIComponent(text)}`,"_blank");
 }
 
-// ── SUMMARY SCREEN ────────────────────────────
+// ── SUMMARY ───────────────────────────────────
 function renderSummary(){
+  batches=loadBatches();
   const pending=batches.filter(b=>b.status==="pending");
   const returned=batches.filter(b=>b.status==="returned");
   document.getElementById("sum-pending").textContent=pending.length;
   document.getElementById("sum-returned").textContent=returned.length;
-
-  // Pieces still out
   const out={};
-  pending.forEach(b=>{
-    b.items.forEach(it=>{
-      const key=`${it.name} (${it.sub})`;
-      out[key]=(out[key]||0)+it.qty;
-    });
-  });
-  const outList=document.getElementById("sum-out-list");
+  pending.forEach(b=>b.items.forEach(it=>{
+    const k=`${it.name} (${it.sub})`;
+    out[k]=(out[k]||0)+it.qty;
+  }));
+  const outEl=document.getElementById("sum-out-list");
   const keys=Object.keys(out);
   if(!keys.length){
-    outList.innerHTML=`<div style="color:#059669;font-weight:600">✅ Nothing out — all returned!</div>`;
+    outEl.innerHTML=`<div style="color:#059669;font-weight:600;font-size:14px">✅ Nothing out — all returned!</div>`;
   } else {
-    outList.innerHTML=keys.map(k=>`
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f0f0f0">
-        <span style="font-weight:500">${k}</span>
-        <span style="font-weight:700;color:#0a1628;background:#f0f4ff;padding:2px 10px;border-radius:8px;font-size:13px">${out[k]}</span>
+    outEl.innerHTML=keys.map(k=>`
+      <div class="out-row">
+        <span style="font-weight:500;font-size:13px">${k}</span>
+        <span class="out-qty">${out[k]}</span>
       </div>`).join("");
   }
 }
@@ -438,7 +437,11 @@ function showToast(msg){
   setTimeout(()=>t.classList.remove("show"),2500);
 }
 
-// Init
+// Close overlay on background tap
+document.getElementById("confirm-overlay").addEventListener("click",function(e){
+  if(e.target===this)closeConfirm();
+});
+
 buildSendList();
 renderSummary();
 </script>
